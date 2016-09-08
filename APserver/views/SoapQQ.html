@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <!-- 預設空間會在 /public 中，故路徑從 public 角度出發 -->
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <title>輿情分析平台 - 議題追蹤</title>
+    <meta name="generator" content="硬是愛數據應用" />
+    <link rel=icon href="issue_guy/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap CSS-->
+    <link href="issue_guy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="issue_guy/css/bootstrap-switch.min.css" rel="stylesheet">
+
+    <!-- Our CSS -->
+    <link href="issue_guy/css/customQQ.css" rel="stylesheet">
+    <link href="issue_guy/css/Indices.css" rel="stylesheet">
+    <link href="issue_guy/css/jqcloud.css" rel="stylesheet">
+    <link href="issue_guy/css/dashboard.css" rel="stylesheet">
+    <link href="issue_guy/css/bootstrap-multiselect.css" rel="stylesheet">
+    <!-- Time Selector CSS -->
+    <link href="issue_guy/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- Sticky-Footer CSS -->
+    <link href="issue_guy/css/sticky-footer.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="issue_guy/js/jquery-2.2.2.min.js"></script>
+
+    <script src="issue_guy/js/bootstrap-switch.min.js"></script>
+    <!-- fullpage -->
+    <script src="issue_guy/js/scrolloverflow.min.js"></script>
+    <script src="issue_guy/js/jquery.fullPage.js"></script>
+    <!-- fullpage css -->
+    <link href="issue_guy/css/jquery.fullPage.css" rel="stylesheet">
+    <!-- Tool.js -->
+    <script src="issue_guy/js/numeral.min.js"></script>
+    <script src="issue_guy/js/html2canvas.js"></script>
+    <script src="issue_guy/js/download.js"></script>
+
+
+    <!-- Our .js part I ^.< -->
+
+    <!-- Every chart Function -->
+    <script src="issue_guy/js/chartQQ/forDashboard.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_0_allArticles.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_1and2_wordCloud.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_3_authorArticles.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_4and5_fieldTransfer.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_6and7_semanticComment.js"></script>
+    <script src="issue_guy/js/chartQQ/Index_8_volTracking.js"></script>
+    <script src="issue_guy/js/chartQQ/Index10_relationIssue.js"></script>
+
+    <!-- Main function -->
+    <script src="issue_guy/js/something_helper.js"></script>
+    <script src="issue_guy/js/do_something.js"></script>
+
+</head>
+
+<body>
+    <!-- header start -->
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role=navigation>
+        <div class="container-fluid">
+            <div class=navbar-header>
+                <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar>
+                    <span class=sr-only>Toggle navigation</span>
+                    <span class=icon-bar></span>
+                    <span class=icon-bar></span>
+                    <span class=icon-bar></span>
+                </button>
+                <a class="navbar-brand" id="logo" href=#>
+                TOPICS
+            </a>
+            </div>
+            <div id=navbar class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/"><b>HOME</b></a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>SERVICE</b> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/soap"><b> TOPICS</b>(議題追蹤)</a></li>
+                                <li><a href="/brands"><b>BRAND ANALYSIS</b>(品牌分析)</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li><a href="/users/logout"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header end -->
+
+    <!-- attr search start -->
+
+    <div class="container-fluid" id="searchbarQQ">
+        <div class="row">
+            <div id="navbar" class="navbar-collapse collapse">
+                <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar>
+                    <span class=sr-only>Toggle navigation</span>
+                    <span class=icon-bar></span>
+                    <span class=icon-bar></span>
+                    <span class=icon-bar></span>
+                </button>
+            </div>
+            <div id="navbarQQ" class="navbar-collapse">
+                <div class="col-xs-12 col-sm-12 col-md-2" id='search'>
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <!-- {{! Here is hbs binding data space }}  -->
+                            <input type="text" id="user_word_here" class="form-control input" placeholder="搜尋關鍵議題..." name="keyword" value={{wordQQ}}>
+                            <input id="The_Judge" type="hidden" name="click_automatic" value={{ automatic_or_not }}>
+                            <input id="Level_checkQQ" type="hidden" name="user_account_level" value={{ user_account_level }}>
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn" type="button" id="submitQQ">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- attr search end -->
+                <div class='col-xs-6 col-sm-6 col-md-1' style="width:4%;padding:0px">
+                    <button id="advanced_coming" class="btn btn-default" style="margin-top: 8px;">進階</button>
+                    <!-- 產生的page，請洽 .js advanced_search -->
+                    <!-- <div class="form-group btn btn-default">
+                    <span>進階</span>
+                    </div> -->
+                </div>
+                <!-- time control start -->
+<!-- <<<<<<< HEAD
+                <div class='col-xs-6 col-sm-6 col-md-1' style="width:4%;padding:0px">
+                    <button id="advanced_coming" class="btn btn-default" style="margin-top: 8px;">進階</button> -->
+                    <!-- 產生的page，請洽 .js advanced_search -->
+                    <!-- <div class="form-group btn btn-default">
+                        <span>進階</span>
+
+                    </div> -->
+                <!-- </div>
+                <div class='col-xs-6 col-sm-6 col-md-2'>
+======= -->
+                <div class='col-xs-6 col-sm-6 col-md-12' id='starttime'>
+<!-- >>>>>>> f25b17ed13332afd14daf8eeac864b5467c41d3a -->
+                    <div class="form-group">
+                        <div class='input-group date' id='start_timeQQ'>
+                            <input type='text' class="form-control" name="start_time" value="2016年1月1日" />
+                            <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+<!-- <<<<<<< HEAD -->
+
+                <!-- <div class='col-xs-6 col-sm-6 col-md-2'> -->
+<!-- ======= -->
+                <div class='col-xs-6 col-sm-6 col-md-12' id='endtime'>
+<!-- >>>>>>> f25b17ed13332afd14daf8eeac864b5467c41d3a -->
+                    <div class="form-group">
+                        <div class='input-group date' id='end_timeQQ'>
+                            <input type='text' class="form-control" name="end_time" value="" />
+                            <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- time control end -->
+                <!-- attr selectall start -->
+                <div class="btn-group isopen" id="btnonof">
+                    <button id="selectAll-all" class="btn btn-default">取消全選</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="issue">
+        <div class="row">
+
+            <!-- control start -->
+            <div class="col-md-2 col-lg-2" id="chart_control_bar">
+                <h3>議題追蹤</h3>
+                <ul class="nav nav-pills nav-stacked" id="menu">
+                    <li data-menuanchor="page1" role="presentation" class="topic_content" show_Chart_QQ="forDashboard" id="let_start_the_analysis_index0"><a href="#page1">輿情圖牆</a></li>
+                    <li data-menuanchor="page2" role="presentation" class="topic_content" show_Chart_QQ="Index0"><a href="#page2">文章總覽</a></li>
+                    <li data-menuanchor="page3" role="presentation" class="topic_content" show_Chart_QQ="Index1 Index2 Index3"><a href="#page3">熱門文章</a></li>
+                    <li data-menuanchor="page4" role="presentation" class="topic_content" show_Chart_QQ="Index4 Index5"><a href="#page4">陣地轉移</a></li>
+                    <li data-menuanchor="page5" role="presentation" class="topic_content" show_Chart_QQ="Index6 Index7"><a href="#page5">正負評論</a></li>
+                    <li data-menuanchor="page6" role="presentation" class="topic_content" show_Chart_QQ="Index8"><a href="#page6">聲量追蹤</a></li>
+                    <li data-menuanchor="page7" role="presentation" class="topic_content" show_Chart_QQ="Index10"><a href="#page7">關聯議題</a></li>
+                </ul>
+            </div>
+            <!-- control end -->
+            <!-- Index_chart start -->
+            <div class="col-md-10 col-lg-10 col-md-offset-2 col-lg-offset-2" id="iframe">
+                <div id="fullpage">
+                    <div class="section active" id="issuecontrol1">
+                        <!-- dashboard here KK -->
+                        <div id="dashboard_area_leoKK" class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12" id="coltitle">
+                                <div class="btn-group isopen">
+                                    <!-- <a href="/soap/give_me_dumpdata" >點我下載啦!!!</a> -->
+                                    <button id="exportRawData_btn" class="btn btn-default"><img style="width:30px; height:30px;" src="issue_guy/img/icons/excel.png"></button>
+                                </div>
+                                <div class="btn-group isopen">
+                                    <button id="exportDashbordChart_btn" class="btn btn-default"><img style="width:30px; height:30px;" src="issue_guy/img/icons/PNG.png"></button>
+                                </div>
+                                <h1>輿情圖牆</h1>
+                                <h3><span id="endmonth"></span>近一個月相關網路聲量指標</h3>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4" id="colleft">
+                                <div id="focus">
+                                    <div class="focus_chart_title">
+                                        <span class="maintitle">關注度</span>
+                                        <span class="subtitle">總瀏覽人數統計</span>
+                                    </div>
+                                    <div class="focus_chart_body" id="focus_chart">
+                                        <div class="sub_chart1-1-all"><img src='issue_guy/img/icons/visible.png' alt=""></div>
+                                        <div class="sub_chart1-1-all" id="focus_level"></div>
+                                    </div>
+                                </div>
+                                <div id="spread_level">
+                                    <div class="spread_level_title_vr">
+                                        <span class="maintitle">擴散度</span>
+                                        <span class="subtitle">議題擴散能量</span>
+                                    </div>
+                                    <div class="sub_spread_level_boday_vr" id="spread_level_chart1"></div>
+                                    <div class="sub_spread_level_boday_vr" id="spread_level_chart2"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4" id="colcenter">
+                                <div id="post">
+                                    <div class="post_chart_title">
+                                        <span class="maintitle">發文量</span>
+                                        <span class="subtitle">總發文文章數</span>
+                                    </div>
+                                    <div class="post_chart_body" id="post_chart">
+                                        <div class="sub_chart1-1-all"><img src='issue_guy/img/icons/report.png' alt=""></div>
+                                        <div class="sub_chart1-1-all" id="post_vol_KK"></div>
+                                    </div>
+                                </div>
+                                <div id="interactive">
+                                    <div class="interactive_title">
+                                        <span class="maintitle">互動度</span>
+                                        <span class="subtitle">話題回應互動比率</span></div>
+                                    <div class="interactive_body" id="interactive_chart"></div>
+                                </div>
+                                <div id="hot">
+                                    <div class="hot_title">
+                                        <span class="maintitle">熱門度</span>
+                                        <span class="subtitle">網路討論聲量總變化</span>
+                                        <span id="hot_growth_rate"></span>
+                                    </div>
+                                    <div class="hot_body" id="hot_level_chart"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4" id="colright">
+                                <div id="author">
+                                    <div class="author_chart_title">
+                                        <span class="maintitle">發文人數</span>
+                                        <span class="subtitle">總發文作者數</span>
+                                    </div>
+                                    <div class="author_chart_body" id="author_chart">
+                                        <div class="sub_chart1-1-all"><img src='issue_guy/img/icons/conference.png' alt=""></div>
+                                        <div class="sub_chart1-1-all" id="author_num_QK"></div>
+                                    </div>
+                                </div>
+                                <div id="goodFeel_growth">
+                                    <div class="goodFeel_growth_title">
+                                        <span class="maintitle">好感度</span>
+                                        <span class="subtitle">正面感相對負面比率</span>
+                                        <span id="goodFeel_growth_rate"></span>
+                                    </div>
+                                    <div class="goodFeel_growth_body" id="goodFeel_level_chart"></div>
+                                </div>
+                                <div id="hot_channel">
+                                    <div class="hot_channel_title">
+                                        <span class="maintitle">發燒頻道</span>
+                                        <span class="subtitle">議題擴散能量</span>
+                                    </div>
+                                    <div class="hot_channel_day">
+                                        <span id="lastweek">上一週</span>
+                                        <span id="thisweek">本週</span>
+                                    </div>
+                                    <div class="hot_channel_body" id="hot_channel_chart"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 col-md-7 col-lg-7" id="col7left">
+                                <div id="relation_issue">
+                                    <div class="relation_issue_title">
+                                        <span class="maintitle">關聯話題</span>
+                                        <span class="subtitle">討論度與關聯度最高的話題</span>
+                                    </div>
+                                    <div class="relation_issue_body">
+                                        <div class="sub_relation_issue_body" id="relation_issue_chart1"></div>
+                                        <div class="sub_relation_issue_body" id="relation_issue_chart2"></div>
+                                    </div>
+                                </div>
+                                <div id="KOL">
+                                    <div class="KOL_title">
+                                        <span class="maintitle">KOL</span>
+                                        <span class="subtitle">意見領袖</span>
+                                    </div>
+                                    <div class="KOL_body" id="kol_chart"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-md-5 col-lg-5" id="col5right">
+                                <div id="social_affect">
+                                    <div class="social_affect_title">
+                                        <span class="maintitle">社群影響</span>
+                                        <span class="subtitle">FB vs News 發文數</span>
+                                    </div>
+                                    <div class="social_affect_body" id="social_affect_chart"></div>
+                                </div>
+                                <div id="warningLight">
+                                    <div class="warningLight_title">
+                                        <span class="maintitle">監測燈號</span>
+                                        <span class="subtitle">高於平均水準</span></div>
+                                    <div class="warningLight_body" id="warningLight_chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- dashboard here KK -->
+                    </div>
+                    <div class="section" id="issuecontrol2">
+                        <div class="Index0_Chart">
+                            <ul>
+                                <li class="sorting_by_which_index0 I_was_been_clicked" value="time" style="margin-left:40%;"><img src='issue_guy/img/icons/hourglass.svg' style="height:20px ; width:20px; margin-right:5px;">時間排序</li>
+                                <li class="sorting_by_which_index0" value="volume"><img src='issue_guy/img/icons/speaker_b.svg' style="height:20px ; width:20px; margin-right:5px;">人氣排序</li>
+                                <li class="sorting_by_which_index0" value="content_semantic_score"><img src='issue_guy/img/icons/neutral_emotion.svg' style="height:20px ; width:20px; margin-right:5px;">情緒排序</li>
+                            </ul>
+                            <div style="clear:both;"></div>
+                            <div id="Initial_search_analysis_pie"></div>
+                            <div id="Initial_search_analysis_all_articles"></div>
+                        </div>
+                    </div>
+                    <div class="section" id="issuecontrol3">
+                        <div class="Index1_Chart">
+                            <div id="jqcloudTitle">熱詞頻譜</div>
+                            <div id="jqcloudContent"></div>
+                        </div>
+                        <div class="Index2_Chart">
+                            <div id="topWord"></div>
+                        </div>
+                        <div class="Index3_Chart">
+                            <div id="index3Title">文章時序</div>
+                            <div class="Bottom">
+                                <div class="Bottom_chartQQ" id="chart_postNumbers">
+                                    <svg> </svg>
+                                </div>
+                            </div>
+                            <div class="BigBang_top">
+                                <div class="col-sm-6 col-md-6 col-ld-6">
+                                    <h3>意見領袖:</h3>
+                                    <div class="AuthorTop10"></div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-ld-6">
+                                    <h3>每日快報:</h3>
+                                    <div class="Post_list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" id="issuecontrol4">
+                        <div class="Index4_Chart">
+                            <div id="index4Title">話題趨勢</div>
+                            <div class="StackedAreaChart" id="chart_index4_source">
+                            </div>
+                        </div>
+                        <div class="Index5_Chart">
+                            <div class="The_dark_night" id="chart_index5_gosh"></div>
+                        </div>
+                    </div>
+                    <div class="section" id="issuecontrol5">
+                        <div class="Index6_Chart">
+                            <div id="emo_count"></div>
+                        </div>
+                        <div class="Index7_Chart">
+                            <div class="Just_Virtualize" id="chart_7_CaptainAmerican">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" id="issuecontrol6">
+                        <div class="Index8_Chart">
+                            <div id="chart_8_volume"></div>
+                            <div id="index8_post">
+                                <ul>
+                                    <li class='chart_8_sort_field chart_8_sort_u_got_this' valueQQ='volume' style='left:20px;'><img src='issue_guy/img/icons/speaker_b.svg'> 人氣排序</li>
+                                    <li class='chart_8_sort_field' valueQQ='content_semantic_score' style='left:30px;border-right:0px solid #fff;'><img src='issue_guy/img/icons/neutral_emotion.svg'> 情緒排序</li>
+                                    <div style='clear:both;'></div>
+                                </ul>
+                                <div id="chart_8_I_dont_know_why_always_table"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" id="issuecontrol7">
+                        <div class="Index10_Chart">
+                            <div id="viz_container10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Setting Page start -->
+    <div class='advanced_bg container-fluid' style='opacity:1;background-color:rgba(0,0,0,0.4);'>
+        <div id='gen_advanced_search_page' class="row">
+            <div class='advanced_search_setting'>
+                <div id="search_setting">進階搜尋設定</div>
+                <div id="searchandclear">
+                    <div class="input-group col-md-3 col-lg-3">
+                        <input type="text" id='user_word_here_advanced' class="form-control input" placeholder="搜尋關鍵議題..." name="keyword" value={{wordQQ}}>
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="ad_submitQQ"><i class="glyphicon glyphicon-search"></i></button>
+                        <button type="button" class="btn btn-default clear_all">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 重新整理
+                        </button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- AND , OR Block -->
+                <div class="settings col-md-6 col-lg-6">
+                    <input type="checkbox" name="and_or_switch" checked>
+                    <button type="button" class="btn btn-default add_and_or">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                    <div class="and_or_region">
+                        <div class='query_block and_or_query input-group'>
+                            <input type='text' id="placeholderand" class='form-control' name='and' placeholder='搜尋關鍵字AND...' />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" value='and'><i class="glyphicon glyphicon-remove"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not Block -->
+                <div class="settings col-md-6 col-lg-6">
+                    <button type="button" class="btn btn-default not" disabled>
+                        <b>NOT</b>
+                    </button>
+                    <button type="button" class="btn btn-default add_not" >
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                    <div class="not_region">
+                        <div class='query_block not_query input-group'>
+                            <input type='text' id='placeholdernot' class='form-control' name='not' placeholder='搜尋關鍵字NOT...' />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" value='not'><i class="glyphicon glyphicon-remove"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='advanced_choose_field btn-group '>領域選擇 :
+                <button type='button ' class='btn btn-default u_choose_all_domain ' aria-expanded='false ' style='float:none; ' id="domains"><span>取消全選</span></button>
+                <div></div>
+            </div>
+
+        </div>
+
+        <span class='close_advanced' style='left:92.7%;'><img src='issue_guy/img/close.svg'></span>
+
+    </div>
+    <!-- Advanced Setting Page end -->
+
+    <script type='text/javascript ' src="issue_guy/js/moment.min.js"></script>
+    <script type='text/javascript ' src="issue_guy/js/zh-tw.js"></script>
+
+    <!-- BootStrap Plugin -->
+    <script src="issue_guy/js/bootstrap.min.js"></script>
+    <script type='text/javascript ' src="issue_guy/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- ScrollDown List  -->
+    <script type='text/javascript ' src="issue_guy/js/bootstrap-multiselect.js"></script>
+    <!-- Our .js part II ^.< -->
+    <!-- for Chart -->
+
+    <script src="issue_guy/js/jqcloud.min.js"></script>
+    <!-- I -->
+    <script src="issue_guy/js/highcharts.js"></script>
+    <!-- II -->
+    <script src="issue_guy/js/exporting.js"></script>
+    <!-- II -->
+    <script src="issue_guy/js/d3.min.js"></script>
+    <!-- III , IV , IX -->
+    <script src="issue_guy/js/echarts.min.js"></script>
+    <!-- VI , VII -->
+    <script src="issue_guy/js/cssmenu.js"></script>
+    <!-- IX -->
+    <script src="issue_guy/js/vizuly_core.min.js"></script>
+    <!-- IX -->
+    <script src="issue_guy/js/vizuly_weightedtree.min.js"></script>
+    <!-- IX -->
+    <script src="issue_guy/js/scroll-scope.min.js"></script>
+</body>
+
+</html>

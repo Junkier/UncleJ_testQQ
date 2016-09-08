@@ -1,0 +1,23 @@
+body {
+  margin:0;
+  padding:0;
+  /* background-color:#00619d; */
+  background: url("bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+  overflow-x:hidden;
+}
+
+div#animatecontent{
+  position: absolute;
+  margin:0 auto;
+  top: 45%;
+  left:48%;
+  /* right:50%; */
+  color:#fff;
+  font-size:60px;
+}
+

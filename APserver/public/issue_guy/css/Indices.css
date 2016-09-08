@@ -1,0 +1,964 @@
+/*===========   for All Index  ===========*/
+
+.sort_field {
+    float: left;
+    border-right: 2px solid #666;
+    color: #888;
+    position: relative;
+    top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sort_field:hover {
+    color: #fff;
+}
+
+.sort_u_got_this {
+    color: #fff;
+}
+
+.castle_in_the_sky {
+    border: 5px solid #333;
+    position: absolute;
+    background-color: #000;
+    top: 100px!important;
+    left: 0;
+    color: #fff;
+    opacity: 0.8;
+    float: left;
+    width: 100%;
+    height: 88%;
+    /* height: 400px; */
+    overflow-y: scroll;
+    display: none;
+    z-index: 999;
+}
+
+
+.close_arti{
+    position: fixed;
+    border-right: 0px solid #fff;
+    right: 30px;
+    top: 117px;
+    cursor:pointer;
+}
+
+
+table {
+    width: 100%;
+}
+
+.thead {
+    font-size: 14px;
+    background-color: steelblue;
+    color: #fff;
+}
+
+.thcell {
+    padding: 5px;
+    padding-left: 8px;
+}
+
+.tdcell {
+    padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th:first-of-type {
+    padding-left: 15px;
+}
+
+td:first-of-type {
+    padding-left: 15px;
+}
+
+.emotiom_light {
+    width: 30px;
+    margin-left: 5px;
+}
+
+
+/*===========   for Index0   ===========*/
+
+.Index0_Chart {
+    width: 100%;
+    height: 600px;
+    padding: 2px;
+    margin-top: 115px;
+    font-family: NotoSansCJKtc-Medium;
+}
+
+.sorting_by_which_index0 {
+    border: 1px solid #bbb;
+    background-color: #eaeaea;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #999;
+    padding: 4px 10px;
+    list-style: none;
+    margin-bottom: -2px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    transition: color 0.3s;
+}
+
+.sorting_by_which_index0:hover {
+    color: #000;
+}
+
+.I_was_been_clicked {
+    border-bottom: 2px solid #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+.getting_next_page{
+  border: 1px solid #bbb;
+  background-color: #eaeaea;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: #999;
+  padding: 4px 10px;
+  list-style: none;
+  margin-bottom: -2px;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  transition: color 0.3s,background-color 0.3s;
+}
+
+.getting_next_page:hover {
+    color: #000;
+    background-color:rgba(255,0,0,0.3);
+}
+
+#Initial_search_analysis_pie {
+    width: 40%;
+    height: 100%;
+    border: 1px solid #bbb;
+    float: left;
+}
+
+#Initial_search_analysis_all_articles {
+    width: 59%;
+    height: 100%;
+    border: 1px solid #bbb;
+    margin-left: 5px;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.articles_top_cell_index0 {
+    margin: 10px 15px 20px 15px;
+    width: 95%;
+    color: #333;
+    font-size: 16px;
+}
+
+.articleQQ img {
+    height: 20px;
+    margin: 3px;
+}
+
+.article_content_index0 {
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.articleQQ_element {
+    margin-left: 20px;
+}
+
+.articleQQ_time_index0,
+.articleQQ_volume_index0,
+.articleQQ_emotion_score_index0 {
+    font-size: 14px;
+}
+
+
+/*===========   for Index1   ===========*/
+
+.Index1_Chart {
+    width: 95%;
+    height: 600px;
+    /* font-family: NotoSansCJKtc-Medium; */
+    font: normal 12px NotoSansCJKtc-Medium;
+    color: #b82;
+    margin: 0 auto;
+}
+
+#jqcloudTitle {
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    margin-top: 150px;
+}
+
+#jqcloudContent {
+    width: 100%;
+    height: 570px;
+}
+
+
+/*===========   for Index2   ===========*/
+
+.Index2_Chart {
+    width: 100%;
+    margin-top: 100px;
+}
+
+#topWord {
+    width: 97%;
+    height: 570px;
+    font: normal 20px NotoSansCJKtc-Medium;
+}
+
+#Apple_Leaf tr:not(.thead):hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#got_u_title {
+    font-size: 30px;
+    text-align: center;
+}
+
+#Apple_Leaf img {
+    height: 20px;
+    opacity: 0.8;
+}
+
+#Apple_Leaf img:hover {
+    opacity: 0.8;
+}
+
+
+/*===========   for Index3   ===========*/
+
+.Index3_Chart {
+    width: 100%;
+    height: 325px;
+    margin-top: 50px;
+}
+
+#index3Title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.Index3_Chart rect {
+    cursor: pointer;
+}
+
+#chart_postNumbers {
+    border: 0px;
+}
+
+.BigBang_top {
+    height: 325px;
+}
+
+.BigBang_top div h3 {
+    text-align: center;
+    border-bottom: 2px solid #bbb;
+    margin: 5px auto;
+    padding: 5px 0px;
+    width: 90%;
+}
+
+.BigBang_top div div.AuthorTop10 {
+    float: left;
+    width: 95%;
+    margin: 5px 10px;
+    height: 300px;
+    border-right: 1px solid #bbb;
+    padding: 0px 5px;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    margin-bottom: 50px;
+}
+
+.BigBang_top div div.Post_list {
+    float: left;
+    width: 95%;
+    margin: 5px 0px;
+    height: 300px;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    margin-bottom: 50px;
+}
+
+div.AuthorTop10 {
+    margin-bottom: 1px;
+    /* font-size:18px; */
+}
+
+.author_lists_span {
+    background: linear-gradient(-90deg, #ccc, #eee);
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    color: #999;
+}
+
+.author_lists_span:hover {
+    color: #555;
+}
+
+span.caret-container {
+    margin: auto 10px;
+}
+
+div.Author_list>a {
+    display: block;
+    background: #f0f0f0;
+    padding: 10px 25px;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    color: #999;
+}
+
+div.Author_list>a:hover {
+    color: #000;
+}
+
+.Bottom_chartQQ {
+    height: 250px;
+    /* border-color: #0f0; */
+}
+
+.Post_list {
+    overflow-y: scroll;
+}
+
+.Post_list div {
+    border: 0px;
+    background: linear-gradient(-90deg, #ccc, #eee);
+    padding: 5px 10px;
+    /* border-bottom: 1px solid #eee; */
+    border-bottom: 1px solid #fff;
+    color: #999;
+}
+
+div.Post_list div a {
+    text-decoration: none;
+    color: #999;
+}
+
+div.Post_list div a:hover {
+    color: #000;
+}
+
+
+/*===========   for Index4   ===========*/
+
+.Index4_Chart {
+    background-color: #fff;
+    height: 650px;
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+
+.StackedAreaChart{
+    height: 600px;
+}
+
+#index4Title {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+/*===========   for Index5   ===========*/
+
+.The_dark_night {
+    width: 100%;
+    height: 550px;
+    margin-bottom: 50px;
+}
+
+
+/*===========   for Index6   ===========*/
+
+.Index6_Chart {
+    width: 100%;
+    height: 600px;
+    margin-top: 130px;
+}
+
+#emo_count {
+    width: 100%;
+    /* height: 100%; */
+}
+
+#chart_index6_download {
+    position: relative;
+    top: 10px;
+    left: -26px;
+}
+
+
+/*===========   for Index7   ===========*/
+
+div.Just_Virtualize {
+    display: block;
+    width: 100%;
+    /* height: 470px; */
+    height: 700px;
+    margin-bottom: 150px
+}
+
+#Jeff_sheng img {
+    height: 20px;
+    opacity: 0.8;
+}
+
+#Jeff_sheng tr:not(.thead):hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.sort_field_gosh_emo {
+    float: left;
+    position: relative;
+    top: 10px;
+    color: #888;
+    padding-right: 10px;
+    border-right: 2px solid #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sort_field_gosh_emo:hover {
+    color: #fff;
+}
+
+.sort_u_r_angry {
+    color: #fff;
+}
+
+#chart_index7_download {
+    position: relative;
+    top: 25px;
+    z-index: 10;
+    left: 26px;
+}
+
+
+/*===========   for Index8  ===========*/
+
+.Index8_Chart {
+    margin-top: 120px;
+    height: 650px;
+    overflow-y: scroll;
+}
+
+#chart_8_volume {
+    margin-bottom: 20px;
+}
+
+#chart_8_I_dont_know_why_always_table {
+    height: 600px;
+    width: 98%;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    margin-top: -20px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+#tbcontent {
+    height: 200px;
+}
+
+.chart_8_sort_field {
+    float: left;
+    background-color: #4682B4;
+    border: 1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 5px 12px;
+    color: #aaa;
+    padding-right: 10px;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+    display: none;
+}
+
+.chart_8_sort_field:hover {
+    color: #fff;
+}
+
+.chart_8_sort_u_got_this {
+    color: #fff;
+    border-bottom: 1px solid steelblue;
+    margin-bottom: -2px;
+}
+
+.chart_8_sort_field img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*===========   for Index9   ===========*/
+
+
+/*  觀察QQQQQQQQQ */
+
+
+/*=============== example.css ===============*/
+
+div.Index9_Chart {
+    width: 100%;
+    border: 1px solid #bbb;
+}
+
+#viz_container9 {
+    margin: 0px auto;
+    width: 100%;
+    height: 600px;
+    padding-top: 0px;
+    border-radius: 6px;
+}
+
+.tile {
+    font-family: NotoSansCJKtc-Medium;
+    font-weight: 300;
+}
+
+.heading {
+    font-family: NotoSansCJKtc-Medium;
+    font-weight: 300;
+}
+
+.side-nav li:hover {
+    background-color: #FFF;
+}
+
+.leftAxis {
+    font-weight: 200;
+}
+
+.datatip-value {
+    position: absolute;
+    right: 10px;
+}
+
+.title {
+    font-family: NotoSansCJKtc-Medium;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.vizuly {
+    font-family: NotoSansCJKtc-Medium;
+}
+
+.Index9_Chart > svg {
+    border-radius: 4px;
+    shape-rendering: crispEdges;
+}
+
+.vz-weighted_tree-node text {
+    fill-opacity: 1;
+}
+
+.vz-data-point {
+    fill-opacity: 1;
+    stroke-width: 1px;
+    stroke-opacity: 1;
+}
+
+.vz-tip-hover {
+    font-weight: 300;
+}
+
+.vz-tip-hover text {
+    opacity: .8;
+}
+
+.my-tip {
+    font-family: NotoSansCJKtc-Medium;
+    font-weight: 300;
+    text-anchor: middle;
+}
+
+
+/* MATERIAL.CSS */
+
+[type="radio"]:checked + label:after {
+    background-color: #448AFF;
+    border-color: #3864c9;
+}
+
+[type="radio"] + label {
+    border-color: #3864c9;
+}
+
+.input-field {
+    margin-left: 0px;
+    padding-bottom: 5px;
+    font-family: NotoSansCJKtc-Medium;
+}
+
+.dropdown-content {
+    font-family: NotoSansCJKtc-Medium;
+    font-size: .5em;
+}
+
+.dropdown-content li span {
+    font-family: NotoSansCJKtc-Medium;
+    font-size: 1.75em;
+}
+
+div.input-field label {
+    margin-left: -10px;
+}
+
+.mdi-navigation-menu {
+    font-size: 30px;
+    color: #444;
+}
+
+div.settings-label {
+    font-size: 12px;
+    color: #BBB;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+
+/* 彈跳方格 */
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    pointer-events: none;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #D5D5D5;
+    font-family: arial, helvetica, sans-serif, NotoSansCJKtc-Medium;
+    font-size: 1.1em;
+    color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.85);
+}
+
+
+/* 彈跳方個中的分隔線 */
+
+.header-rule {
+    height: 1px;
+    margin: 1px auto 3px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background: #ddd;
+    width: 125px;
+}
+
+
+/**/
+
+.header1 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.header2 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #666;
+    text-align: center;
+}
+
+.header3 {
+    color: #333;
+    text-align: left;
+    font-size: 15px;
+    font-style: italic;
+    font-family: NotoSansCJKtc-Medium;
+    text-align: center;
+}
+
+i.mdi-navigation-menu:before {
+    font-size: 40px;
+    content: "\e662";
+    background-color: red;
+}
+
+i.mdi-navigation-menu:hover {
+    transition: color 0.5s ease;
+    color: #0176B4;
+}
+
+#myDataTip {
+    font-family: NotoSansCJKtc-Medium;
+    line-height: 18px;
+}
+
+
+/* ===============vizuly.css=============== */
+
+path.domain {
+    fill: none;
+}
+
+.vizuly {
+    fill: #AAA;
+    shape-rendering: auto;
+    padding-top: 65px;
+}
+
+.vz-plot-background {
+    fill: #FFF;
+}
+
+.vz-bar {
+    stroke: #EEE;
+    shape-rendering: auto;
+}
+
+.vz-area {
+    fill-opacity: 0.7;
+    shape-rendering: auto;
+}
+
+.vz-line {
+    stroke: #777;
+    stroke-width: 1px;
+    stroke-opacity: 1;
+    fill: none;
+    shape-rendering: auto;
+}
+
+.vz-tip {
+    stroke: 1px;
+    fill: none;
+    stroke: #777777;
+    stroke-opacity: 1;
+    shape-rendering: auto;
+}
+
+.vz-line-indicator {
+    stroke: #555;
+    stroke-width: 1px;
+}
+
+.vz-data-point {
+    shape-rendering: auto;
+}
+
+.vz-bottomAxis {
+    shape-rendering: crispEdges;
+}
+
+.vz-radial-axis-tick {
+    font-weight: 300;
+}
+
+.vz-skin-axiis {
+    background-image: linear-gradient( to bottom, #d0d0d0, #dfdfdf, #f3f3f3, #d0d0d0);
+    border-radius: 5px;
+    border: 1px solid #BBB;
+}
+
+.vz-skin-ocean {
+    background-image: url("img/vz-skin-galaxy_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.vz-axiis-datatip {
+    background: rgba(232, 232, 232, 0.9);
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    fill: #FFF;
+    padding: 10px;
+    font-face: NotoSansCJKtc-Medium;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #000;
+}
+
+.vz-material-datatip {
+    background: rgba(35, 35, 35, 0.7);
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    fill: #FFF;
+    padding: 10px;
+    font-face: NotoSansCJKtc-Medium;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #FFF;
+}
+
+.vz-neon-datatip {
+    background: rgba(106, 106, 106, 0.7);
+    border-radius: 3px;
+    border: 1px solid #777;
+    padding: 10px;
+    font-face: NotoSansCJKtc-Medium;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #FFF;
+}
+
+.vz-minimal-datatip {
+    background: rgba(220, 220, 220, 1);
+    border-radius: 1px;
+    border: 1px solid #333;
+    padding: 10px;
+    font-face: NotoSansCJKtc-Medium;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.vz-minimal-datatip span {
+    font-weight: 300!important;
+}
+
+.vz-viz circle {
+    shape-rendering: auto;
+}
+
+.vz-skin-political-influence {
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+div.Index9_Chart > svg {
+    fill: #FFF;
+}
+
+i.mdi-navigation-menu:before {
+    font-size: 40px;
+    content: "\e662";
+}
+
+i.mdi-navigation-menu:hover {
+    transition: color 0.5s ease;
+    color: #0176B4;
+}
+
+
+/* ===============vizuly_weightedtree.css=============== */
+
+
+/*****  DEFAULTS ******/
+
+div.vz-weighted_tree-viz {
+    margin-top: -20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.vz-weighted_tree-viz circle {
+    fill: #777;
+    fill-opacity: .5;
+}
+
+
+/* .vz-weighted_tree-viz text {
+    fill:#777;
+} */
+
+.vz-weighted_tree-viz path {
+    stroke: #777;
+    stroke-opacity: .5;
+}
+
+
+/******** FIRE **********/
+
+.vz-skin-fire .vz-radial_progress-track {
+    fill-opacity: .1;
+}
+
+
+/******** TEST CONTAINER **********/
+
+svg.vz-weighted_tree-viz {
+    fill: none;
+    font-family: NotoSansCJKtc-Medium;
+    margin-top: -20px;
+}
+
+div.radial_container {
+    float: left;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+
+/*===========   for Index10  ===========*/
+
+div.Index10_Chart {
+    width: 100%;
+    height: 100vh;
+    /* height:650px; */
+    overflow: hidden;
+}
+
+#viz_container10 {
+    margin: 0px auto;
+    margin-top: 100px;
+    width: 100%!important;
+    /* height: 600px; */
+    height: 100vh;
+    padding-top: 0px;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+
+div.Index10_Chart > svg {
+    fill: #FFF;
+}
+
+.Index10_Chart > svg {
+    border-radius: 4px;
+    shape-rendering: crispEdges;
+}
+
+#chart_index10_download {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    z-index: 10;
+}
+
+
+/*===========   Something Garbage  ===========*/
+
+#close {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    top: 110px;
+    z-index: 1040;
+    cursor: pointer;
+}

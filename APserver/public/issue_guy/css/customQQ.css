@@ -1,0 +1,404 @@
+body {
+    margin-top: 50px;
+    /* font-family: "source-han-sans-traditional"; */
+}
+
+.bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1030;
+    /*display:none;*/
+}
+
+/*=========== This is for advanced setting. ===========*/
+div#gen_advanced_search_page{
+    width: 80%;
+    height: 400px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-left: 11%;
+}
+
+.query_block input{
+    display:inline;
+    width: 20%;
+    height: 25px;
+}
+
+.advanced_bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+/*<<<<<<< HEAD*/
+    /*z-index: 1030;
+
+
+
+.advanced_search_setting{
+    height:300px;
+    overflow-y:scroll;
+    margin-left: 12px;
+    padding-top: 10px;
+}*/
+}
+.close_bg_gosh_chart{
+    position: fixed;
+    border-right: 0px solid #fff;
+    right: 100px;
+    top: 117px;
+    cursor:pointer;
+}
+
+.close_advanced{
+    position: fixed;
+    border-right: 0px solid #fff;
+    left: 96%;
+    top: 117px;
+    cursor:pointer;
+}
+/*=======================================================*/
+/*div#gosh_chart_and_waiting_circle {
+    text-align: center;
+    width: 100%;
+    height: 450px;
+
+}*/
+/*=======*/
+    z-index: 1650;
+    /* display:none; */
+}
+
+/*>>>>>>> f25b17ed13332afd14daf8eeac864b5467c41d3a*/
+
+.divide-nav {
+    height: 50px;
+    /* background-color: #F00; */
+}
+
+.divide-text {
+    color: #fff;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+.affix {
+    top: 50px;
+    width: 100%;
+}
+
+.filler {
+    min-height: 2000px;
+}
+
+.navbar-form {
+    padding-left: 0;
+}
+
+.navbar-collapse {
+    /*padding-left: 0;*/
+}
+
+.nav-sidebar {
+    transition: box-shadow 0.5s;
+}
+
+.nav-sidebar:hover {
+    box-shadow: 0px 12px 17px #888;
+}
+
+#chart_control_bar {
+    height: 100vh;
+    box-shadow: 0px 1px 6px 0px rgba(100, 100, 100, .7);
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(100, 100, 100, .7);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(100, 100, 100, .7);
+    position: fixed;
+    margin-top: 100px;
+    /* padding-left:0px; */
+    /* padding-right:0px; */
+}
+
+ul#brand.dropdown-menu {
+    padding: 0px;
+    color: #999;
+}
+
+ul#brand li {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    list-style-type: none;
+    background-color: #fff;
+    color: #999;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+ul#brand li:hover {
+    -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075), 0 0 8px rgba(203, 203, 203, .6);
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075), 0 0 8px rgba(203, 203, 203, .6);
+    background-color: #eee;
+    color: #555;
+}
+
+.btn-group {
+    margin-top: 1px;
+}
+
+#issuecontrol1,
+#issuecontrol2,
+#issuecontrol3,
+#issuecontrol4,
+#issuecontrol5,
+#issuecontrol6,
+#issuecontrol7 {
+    height: 100vh;
+    /* border: 1px solid #ccc; */
+    /* opacity:0.5; */
+}
+
+#logo {
+    position: absolute;
+    color: #9d9d9d;
+    text-decoration: none;
+}
+
+a#logo:hover {
+    color: #fff;
+}
+
+div#custom-search-input {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+#search,
+#starttime,
+#endtime{
+    width: 180px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.form-group {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+div#start_timeQQ {
+    /* margin-right: 10px; */
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@font-face {
+    font-family: NotoSansCJKtc-Medium;
+    src: local('NotoSansCJKtc-Medium'),
+         url(../fonts/NotoSansCJKtc-Medium.otf) format("opentype");
+
+}
+/* #selectAll-all */
+
+body {
+    font-family: NotoSansCJKtc-Medium;
+}
+
+div#gosh_chart_and_waiting_circle {
+    text-align: center;
+    width: 90vw;
+    height: 80vh;
+    background-color: #fff!important;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px 3px rgba(100, 100, 100, .7);
+    -webkit-box-shadow: 0px 3px 6px 3px rgba(100, 100, 100, .7);
+    -moz-box-shadow: 0px 3px 6px 3px rgba(100, 100, 100, .7);
+}
+/* R.W.D */
+
+div#navbarQQ {
+    background-color: #f8f8f8;
+    /* display: none; */
+    box-shadow:0px 2px 6px 3px rgba(100, 100, 100, .7);
+    -webkit-box-shadow:0px 2px 6px 3px rgba(100, 100, 100, .7);
+    -moz-box-shadow:0px 2px 6px 3px rgba(100, 100, 100, .7);
+    width: 100%!important;
+    position: fixed;
+}
+
+div#searchbarQQ {
+    background: #fff;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 15px;
+    margin-top: 50px;
+}
+
+/* 陣地全選按鈕寬度 */
+
+button#selectAll-all {
+    width: 82px;
+}
+
+button.multiselect.dropdown-toggle.btn.btn-default {
+    width: 120px;
+}
+
+label.checkbox {
+    width: 280px;
+}
+/* 修改 四陣地按鈕的底色字的顏色 */
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover {
+    color: #000;
+    background-color: #fff;
+}
+.col-xs-12.col-sm-12.col-md-2,.col-xs-6.col-sm-6.col-md-2{
+    padding-right: 5px!important;
+    padding-left: 0px!important;
+}
+#btnonof {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+#btnsocial {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    margin-right: 5px;
+    padding-left: 0px;
+}
+
+/*=========== This is for advanced setting. ===========*/
+div#gen_advanced_search_page{
+    width: 90vw;
+    height: 80vh;
+    background-color:#fff;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+.query_block input{
+    /* margin-top: 15px; */
+    display:inline;
+    width: 50%;
+    height: 34px;
+}
+
+.advanced_bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1000;
+    display: none;
+}
+
+.advanced_search_setting{
+    overflow-y: scroll;
+    width: 85vw;
+    height: 55vh;
+    margin: 0 auto;
+    padding-top: 15px;
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+.advanced_search_setting .input-group{
+    margin-bottom: 15px;
+}
+
+#search_setting{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.settings{
+    padding-right: 10px;
+    padding-left: 0px;
+    margin-bottom: 15px;
+}
+
+#ad_submitQQ{
+    margin-right: 15px;
+}
+
+/*.choose{
+    margin-right: 10px;
+    width: 55px;
+}*/
+
+.clear_all{
+    border-radius: 4px!important;
+}
+
+.bootstrap-switch,.choose,.add_and_or,.not,.add_not{
+    margin-bottom: 15px;
+}
+
+.advanced_choose_field{
+    width: 85vw;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    display: block;
+    font-size: 20px;
+}
+
+.advanced_choose_field div{
+    color:#555;
+    font-size: 20px;
+}
+
+.advanced_choose_field div input{
+    margin-right: 5px;
+}
+
+#domains{
+    width: 82px;
+    margin-bottom: 5px;
+}
+
+.domain {
+    margin-top: 5px;
+    width: 120px;
+    display: inline-block;
+}
+/*
+.andornot{
+    padding-right: 10px;
+    padding-left: 0px;
+}*/
+
+/*=======================================================*/
